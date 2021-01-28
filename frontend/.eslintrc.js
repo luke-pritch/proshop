@@ -38,6 +38,7 @@ module.exports = {
     ],
     'import/extensions': 'off',
     'no-use-before-define': 'off',
+    'no-underscore-dangle': 0,
     '@typescript-eslint/no-empty-interface': 0,
     '@typescript-eslint/no-use-before-define': ['error'],
   },
