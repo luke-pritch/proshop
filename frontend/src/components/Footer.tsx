@@ -8,7 +8,7 @@ const Footer = (props: Props) => {
     <footer>
       <Container>
         <Row>
-          <Col className="text-center py-3">
+          <Col className='text-center py-3'>
             Copyright &copy; Luke Pritchard 2021
           </Col>
         </Row>

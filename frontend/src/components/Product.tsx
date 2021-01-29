@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import { Card } from 'react-bootstrap';
 import Rating from './Rating';
 
@@ -20,25 +20,25 @@ interface Props {
 const Product: React.FC<Props> = (props: Props) => {
   const { product } = props;
   return (
-    <Card className="my-3 p-3 rounded">
+    <Card className='my-3 p-3 rounded'>
       <a href={`/product/${product.id}`}>
-        <Card.Img src={product.image} variant="top" />
+        <Card.Img src={product.image} variant='top' />
       </a>
 
       <Card.Body>
         <a href={`/product/${product.id}`}>
-          <Card.Title as="div">
+          <Card.Title as='div'>
             <strong>{product.name}</strong>
           </Card.Title>
         </a>
-        <Card.Text as="div" className="my-3">
+        <Card.Text as='div' className='my-3'>
           <Rating
             value={product.rating}
             text={`${product.numReviews} reviews`}
-            color="gold"
+            color='gold'
           />
         </Card.Text>
-        <Card.Text className="py-1" as="h3">
+        <Card.Text className='py-1' as='h3'>
           {product.price}
         </Card.Text>
       </Card.Body>

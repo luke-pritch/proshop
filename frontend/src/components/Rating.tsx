@@ -20,7 +20,7 @@ const Rating: React.FC<Props> = (props: Props) => {
   };
 
   return (
-    <div className="rating">
+    <div className='rating'>
       <span>
         <i style={{ color }} className={ratingIcon(value)} />
         <i style={{ color }} className={ratingIcon(value - 1)} />

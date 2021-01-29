@@ -39,6 +39,7 @@ module.exports = {
     'import/extensions': 'off',
     'no-use-before-define': 'off',
     'no-underscore-dangle': 0,
+    'prettier/prettier': ['error', { jsxSingleQuote: true }],
     '@typescript-eslint/no-empty-interface': 0,
     '@typescript-eslint/no-use-before-define': ['error'],
   },
