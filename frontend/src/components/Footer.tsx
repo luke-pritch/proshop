@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 interface Props {}
 
-const Footer = (props: Props) => {
+const Footer: React.FC<Props> = (props: Props) => {
   return (
     <footer>
       <Container>

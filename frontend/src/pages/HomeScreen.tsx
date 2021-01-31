@@ -5,7 +5,7 @@ import Product from '../components/Product';
 
 interface Props {}
 
-const HomeScreen = (props: Props) => {
+const HomeScreen: React.FC<Props> = (props: Props) => {
   return (
     <>
       <h1>Latest Products</h1>

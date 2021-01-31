@@ -4,7 +4,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 interface Props {}
 
-const Header = (props: Props) => {
+const Header: React.FC<Props> = (props: Props) => {
   return (
     <header>
       <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
