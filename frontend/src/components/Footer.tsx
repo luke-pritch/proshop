@@ -1,9 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-interface Props {}
-
-const Footer: React.FC<Props> = (props: Props) => {
+const Footer: React.FC = () => {
   return (
     <footer>
       <Container>

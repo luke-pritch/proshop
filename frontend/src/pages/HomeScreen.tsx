@@ -3,9 +3,7 @@ import { Col, Row } from 'react-bootstrap';
 import products from '../products';
 import Product from '../components/Product';
 
-interface Props {}
-
-const HomeScreen: React.FC<Props> = (props: Props) => {
+const HomeScreen: React.FC = () => {
   return (
     <>
       <h1>Latest Products</h1>
