@@ -1,15 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap';
-import products from '../products';
+import axios from 'axios';
 import Rating from '../components/Rating';
-import verify from '../utils';
 
 type RouteParams = { id: string };
+interface Product {
+  id: string;
+  name: string;
+  image: string;
+  description: string;
+  brand: string;
+  category: string;
+  price: number;
+  countInStock: number;
+  rating: number;
+  numReviews: number;
+}
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const ProductScreen: any = ({ match }: RouteComponentProps<RouteParams>) => {
-  const product = verify(products.find((p) => p.id === match.params.id));
+const ProductScreen = ({ match }: RouteComponentProps<RouteParams>) => {
+  const dummyProduct: Product = {
+    id: '0',
+    name: 'null',
+    image: '/',
+    description: 'null',
+    brand: 'null',
+    category: 'null',
+    price: 0,
+    countInStock: 0,
+    rating: 0,
+    numReviews: 0,
+  };
+  const [product, setProduct] = useState<Product>(dummyProduct);
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const { data } = await axios.get<Product>(
+        `/api/products/${match.params.id}`,
+      );
+      setProduct(data);
+    };
+    fetchProduct();
+  }, []);
   const currentStock = product.countInStock > 0 ? 'In Stock' : 'Out of Stock';
 
   return (
