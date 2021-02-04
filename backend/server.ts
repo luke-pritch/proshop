@@ -1,10 +1,10 @@
 import dotenv from 'dotenv';
 import express from 'express';
-import verify from './utils';
-import connectDB from './config/db';
-import products from './data/products';
+import verify from './src/utils';
+import connectDB from './src/config/db';
+import products from './src/data/products';
 
-dotenv.config({ path: '../.env' });
+dotenv.config({ path: '.env' });
 connectDB();
 const app = express();
 
