@@ -89,10 +89,12 @@ This is an example eCommerce store using full stack MERN and TypeScript. Built o
 
 ### Built With
 
+- [MongoDB](https://www.mongodb.com/)
+- [Express](https://expressjs.com/)
 - [React](https://reactjs.org/)
+- [Node.js](https://nodejs.org/en/)
 - [React-Bootstrap](https://react-bootstrap.github.io/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Node.js](https://nodejs.org/en/)
 
 <!-- GETTING STARTED -->
 
